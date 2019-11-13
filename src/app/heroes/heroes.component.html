@@ -1,0 +1,7 @@
+<h2>
+  My heroes
+</h2>
+<div class='addHero'><label for="name">Hero Name: </label><input type="text" #heroName><button (click)='addHero(heroName.value)'>add</button></div>
+<a *ngFor="let hero of heroes" routerLink="/detail/{{hero.id}}">
+  <h4><b>{{hero.id}} </b>{{hero.name}}</h4>
+</a>

@@ -1,0 +1,17 @@
+<h3>
+  Top heroes
+</h3>
+<div class="outer">
+<a *ngFor="let hero of heroes | slice:0:3;" routerLink="/detail/{{hero.id}}">
+  <div class="topHero"><h4>{{hero.name}}</h4></div>
+</a>
+</div>
+<h4>Hero search</h4>
+<input #searchbox type="text" (input)="search(searchbox.value)">
+<ul class="search-result">
+  <li *ngFor="let hero of searchList" >
+    <a routerLink="/detail/{{hero.id}}">
+      {{hero.name}}
+    </a>
+  </li>
+</ul>
