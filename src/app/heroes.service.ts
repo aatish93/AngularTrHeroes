@@ -49,13 +49,22 @@ export class HeroesService {
   }
   addNewHero(value){
     this.heroes.push({id:(this.getMaxId()+1),name: value})
+    return this.getMaxId();
   }
   searchHero(term){
     var list=[];
     for(var i=0;i<this.heroes.length;i++){
-      if(this.heroes[i].name.includes(term))
+      if(this.heroes[i].name.includes(term) && term!='')
         list.push(this.heroes[i]);
     }
     return list;
+  }
+  deleteHero(id){
+    for(var i=0;i<this.heroes.length;i++){
+      if(this.heroes[i].id==id){
+        this.heroes.splice(i,1);
+        return this.heroes;
+      }
+    }
   }
 }

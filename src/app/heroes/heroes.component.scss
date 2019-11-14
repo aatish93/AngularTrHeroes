@@ -1,0 +1,31 @@
+.hero{
+    text-align: center;
+    border: 1px solid;
+    padding: 10px;
+    height: 30px;
+}
+#idBox{
+    background-color: purple;
+    color: white;
+    width: 30px;
+}
+.outerHero{
+    display: flex;
+}
+#delBox{
+    background-color: grey;
+    width: 30px;
+}
+#nameBox{
+    min-width: 120px;
+}
+#nameBox:hover{
+    background-color: aqua;
+}
+#delBox:hover{
+    background-color: aqua;
+}
+#idBox:hover{
+    background-color: aqua;
+    color: black;
+}

@@ -2,6 +2,7 @@
   My heroes
 </h2>
 <div class='addHero'><label for="name">Hero Name: </label><input type="text" #heroName><button (click)='addHero(heroName.value)'>add</button></div>
-<a *ngFor="let hero of heroes" routerLink="/detail/{{hero.id}}">
-  <h4><b>{{hero.id}} </b>{{hero.name}}</h4>
-</a>
+<div class='outerHero' *ngFor="let hero of heroes" >
+<div class='outerHero' routerLink="/detail/{{hero.id}}">
+  <div class='hero' id='idBox'><h4><b>{{hero.id}} </b></h4></div><div class='hero' id='nameBox'><h4>{{hero.name}}</h4></div>
+</div><div class='hero' id='delBox' (click)="deleteHero(hero.id)">X</div></div>

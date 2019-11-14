@@ -1,0 +1,7 @@
+<div>
+  <h4>Messages</h4>
+  <button (click)="clearMessages()">clear</button>
+  <ul *ngFor="let message of messagesList">
+    <li>{{message}}</li>
+  </ul>
+</div>
